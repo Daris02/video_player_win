@@ -49,6 +49,7 @@ add_custom_target(${PROJECT_NAME}_DEPENDENCIES_DOWNLOAD ALL
 )
 
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/DX11VideoRenderer")
+include_directories("${CMAKE_BINARY_DIR}/packages/Microsoft.Windows.ImplementationLibrary/build/native/include")
 AUX_SOURCE_DIRECTORY(DX11VideoRenderer DX11VideoRenderer_Sources)
 ######## Jacky }
 
@@ -75,7 +76,7 @@ add_library(${PLUGIN_NAME} SHARED
 apply_standard_settings(${PLUGIN_NAME})
 
 # Jacky {
-target_link_libraries(${PLUGIN_NAME} PRIVATE ${CMAKE_BINARY_DIR}/packages/Microsoft.Windows.ImplementationLibrary/build/native/Microsoft.Windows.ImplementationLibrary.targets)
+# target_link_libraries(${PLUGIN_NAME} PRIVATE ${CMAKE_BINARY_DIR}/packages/Microsoft.Windows.ImplementationLibrary/build/native/Microsoft.Windows.ImplementationLibrary.targets)
 # Jacky }
 
 
